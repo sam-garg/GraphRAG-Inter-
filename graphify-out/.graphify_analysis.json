@@ -1,0 +1,31 @@
+{
+  "communities": {
+    "0": [
+      "main",
+      "main_build_knowledge_graph",
+      "main_retrieve_graph_context"
+    ],
+    "1": [
+      "pkg_graphrag"
+    ]
+  },
+  "cohesion": {
+    "0": 0.6666666666666666,
+    "1": 1.0
+  },
+  "gods": [
+    {
+      "id": "pkg_graphrag",
+      "label": "graphrag",
+      "degree": 0
+    }
+  ],
+  "surprises": [],
+  "questions": [
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `graphrag` to the rest of the system?",
+      "why": "1 weakly-connected nodes found - possible documentation gaps or missing edges."
+    }
+  ]
+}

@@ -1,0 +1,233 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "main.py",
+      "file_type": "code",
+      "source_file": "main.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "main.py",
+      "id": "main",
+      "community_name": "GraphRAG Pipeline",
+      "degree": 5
+    },
+    {
+      "label": "load_document()",
+      "file_type": "code",
+      "source_file": "main.py",
+      "source_location": "L35",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "load_document()",
+      "id": "main_load_document",
+      "community_name": "GraphRAG Pipeline",
+      "degree": 2
+    },
+    {
+      "label": "extraction_chain",
+      "file_type": "code",
+      "source_file": "main.py",
+      "source_location": "L32",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "extraction_chain",
+      "id": "main_extraction_chain",
+      "community_name": "GraphRAG Pipeline",
+      "degree": 3
+    },
+    {
+      "label": "build_knowledge_graph()",
+      "file_type": "code",
+      "source_file": "main.py",
+      "source_location": "L61",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "build_knowledge_graph()",
+      "id": "main_build_knowledge_graph",
+      "community_name": "GraphRAG Pipeline",
+      "degree": 3
+    },
+    {
+      "label": "retrieve_graph_context()",
+      "file_type": "code",
+      "source_file": "main.py",
+      "source_location": "L83",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "retrieve_graph_context()",
+      "id": "main_retrieve_graph_context",
+      "community_name": "GraphRAG Pipeline",
+      "degree": 3
+    },
+    {
+      "label": "rag_chain",
+      "file_type": "code",
+      "source_file": "main.py",
+      "source_location": "L131",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "rag_chain",
+      "id": "main_rag_chain",
+      "community_name": "GraphRAG Pipeline",
+      "degree": 2
+    },
+    {
+      "label": "knowledge_base.txt",
+      "file_type": "document",
+      "source_file": "knowledge_base.txt",
+      "source_location": "L1",
+      "_origin": "semantic",
+      "community": 1,
+      "norm_label": "knowledge_base.txt",
+      "id": "doc_knowledge_base",
+      "community_name": "Corpus & Configuration",
+      "degree": 2
+    },
+    {
+      "label": "graphrag package",
+      "file_type": "code",
+      "type": "package",
+      "ecosystem": "python",
+      "source_file": "pyproject.toml",
+      "source_location": "L1",
+      "version": "0.1.0",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "graphrag package",
+      "id": "pkg_graphrag",
+      "community_name": "Corpus & Configuration",
+      "degree": 1
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "main",
+      "target": "main_load_document"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "main",
+      "target": "main_extraction_chain"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L61",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "main",
+      "target": "main_build_knowledge_graph"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L83",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "main",
+      "target": "main_retrieve_graph_context"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L131",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "main",
+      "target": "main_rag_chain"
+    },
+    {
+      "relation": "reads",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "main_load_document",
+      "target": "doc_knowledge_base"
+    },
+    {
+      "relation": "extracts_triples_from",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L55",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "main_extraction_chain",
+      "target": "doc_knowledge_base"
+    },
+    {
+      "relation": "populates",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L76",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "main_extraction_chain",
+      "target": "main_build_knowledge_graph"
+    },
+    {
+      "relation": "traversed_by",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L137",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "main_build_knowledge_graph",
+      "target": "main_retrieve_graph_context"
+    },
+    {
+      "relation": "supplies_context_to",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L145",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "main_retrieve_graph_context",
+      "target": "main_rag_chain"
+    },
+    {
+      "relation": "configures",
+      "confidence": "EXTRACTED",
+      "source_file": "pyproject.toml",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "pkg_graphrag",
+      "target": "main"
+    }
+  ],
+  "hyperedges": []
+}
